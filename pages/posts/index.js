@@ -18,7 +18,12 @@ export default function Posts() {
       alignItems="center"
       spacing={1}
       direction="row"
-      sx={{ height: "100vh" }}
+      sx={{
+        background:
+          "linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))",
+      }}
+      columns={14}
+      pt={2}
     >
       <PostContent post={PostList} />
     </Grid>

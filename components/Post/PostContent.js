@@ -12,26 +12,38 @@ export default function PostContent({ post }) {
   return (
     <>
       {postDetail?.map((post, idx) => (
-        <Grid mt={2} mr item xs={12} sm={6} md={4} lg={3} key={idx}>
-          <Card sx={{ minWidth: 250 }}>
+        <Grid item xs={12} sm={6} md={4} lg={3} key={idx}>
+          <Card
+            elevation={2}
+            sx={{
+              minWidth: 250,
+              cursor: "pointer",
+              ":hover": {
+                transform: "scale(1.05)",
+                transition: "all 0.3s ease-in-out",
+                boxShadow: "0 0 15px 0 rgba(245, 39, 145, 0.6)",
+              },
+            }}
+          >
             <CardContent>
-              <Typography
-                sx={{ fontSize: 14 }}
-                color="text.secondary"
-                gutterBottom
-              >
-                #{post?.id}
+              <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+                📰 Post #{post?.id}
               </Typography>
-              <Typography variant="h5" component="div">
+              <Typography sx={{ mb: 1.5 }} id="OneLineEllipsis" variant="h5">
                 {post?.title}
               </Typography>
-              <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                User #{post?.userId}
+              <Typography
+                colo="text.secondary"
+                id="TwoLineEllipsis"
+                variant="caption"
+              >
+                {post?.body}
               </Typography>
-              <Typography variant="body2">{post?.body}</Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Learn More</Button>
+              <Button size="small" variant="outlined" color="secondary">
+                Learn More 🔥
+              </Button>
             </CardActions>
           </Card>
         </Grid>
