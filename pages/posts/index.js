@@ -23,7 +23,7 @@ export default function Posts() {
           "linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))",
       }}
       columns={14}
-      pt={2}
+      p={2}
     >
       <PostContent post={PostList} />
     </Grid>

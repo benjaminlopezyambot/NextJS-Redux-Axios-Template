@@ -4,7 +4,7 @@ import axios from "axios";
 export default function getPosts() {
   return async (dispatch) => {
     try {
-      const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+      const res = await axios.get("https://dummyjson.com/posts?limit=100");
       dispatch({
         type: GET_POSTS,
         payload: res.data,

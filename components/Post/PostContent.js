@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 
 export default function PostContent({ post }) {
-  const postDetail = post?.posts;
+  const postDetail = post?.posts?.posts;
   return (
     <>
       {postDetail?.map((post, idx) => (
@@ -17,7 +17,6 @@ export default function PostContent({ post }) {
             elevation={2}
             sx={{
               minWidth: 250,
-              cursor: "pointer",
               ":hover": {
                 transform: "scale(1.05)",
                 transition: "all 0.3s ease-in-out",
@@ -42,7 +41,7 @@ export default function PostContent({ post }) {
             </CardContent>
             <CardActions>
               <Button size="small" variant="outlined" color="secondary">
-                Learn More 🔥
+                Comments ☕
               </Button>
             </CardActions>
           </Card>
