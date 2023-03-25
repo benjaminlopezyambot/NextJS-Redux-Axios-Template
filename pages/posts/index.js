@@ -1,4 +1,5 @@
 import PostContent from "@/components/Post/PostContent";
+import PostContentSkeleton from "@/components/Skeletons/PostContentSkeleton";
 import getPosts from "@/store/actions/PostActions/getPosts";
 import { Grid } from "@mui/material";
 import { useEffect } from "react";
@@ -25,7 +26,11 @@ export default function Posts() {
       columns={14}
       p={2}
     >
-      <PostContent post={PostList} />
+      {PostList?.loading ? (
+        <PostContentSkeleton />
+      ) : (
+        <PostContent post={PostList} />
+      )}
     </Grid>
   );
 }
