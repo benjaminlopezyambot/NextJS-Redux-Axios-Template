@@ -40,8 +40,8 @@ export default function PostContent({ post }) {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small" variant="outlined" color="secondary">
-                Comments ☕
+              <Button size="small" variant="outlined" color="warning">
+                Comments 🍺
               </Button>
             </CardActions>
           </Card>
